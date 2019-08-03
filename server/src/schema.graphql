@@ -1,0 +1,30 @@
+type Query {
+  user(id: ID): User
+  users: [User!]!
+}
+
+type Mutation {
+  createUser(data: CreateUserInput): User!
+  deleteUser(id: ID!): User!
+}
+
+type Subscription {
+  # SUBSCRIBE step 3 : add subscription to schema
+  user: UserSubscriptionPayload!
+}
+
+input CreateUserInput {
+  name: String!
+  email: String!
+  age: Int
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+type UserSubscriptionPayload {
+  data: User!
+}

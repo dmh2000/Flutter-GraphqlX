@@ -1,0 +1,39 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["mocha"],
+  "globals": {
+    "exports": false
+  },
+  "extends": "eslint:recommended",
+  // extends: ["eslint:recommended", "prettier"],
+  "rules": {
+    "no-unused-vars": "off",
+    "eqeqeq": "error",
+    "semi": "error",
+    "semi-spacing": [
+      "error",
+      {
+        "after": true,
+        "before": false
+      }
+    ],
+    "camelcase": "error",
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": true,
+        "object": true
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ]
+  }
+}

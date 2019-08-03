@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "10.0.0",
+          "esmodules": true
+        }
+      }
+    ]
+  ],
+  "plugins": ["babel-plugin-transform-object-rest-spread"]
+}
