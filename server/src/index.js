@@ -1,7 +1,7 @@
 import { GraphQLServer, PubSub } from 'graphql-yoga';
 
-import db from './src/db';
-import Resolvers from './src/resolvers/Resolvers';
+import db from './db';
+import Resolvers from './resolvers/Resolvers';
 
 // subscription support
 const pubsub = new PubSub();

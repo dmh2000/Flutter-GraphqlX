@@ -5,17 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node index.js --inspect"
+    "start": "npx babel-node src/index.js --inspect",
+    "prod": "npx babel src --out-dir dist && node ./dist/index.js --inspect",
+    "build": "npx babel src --out-dir dist"
   },
   "dependencies": {
     "graphql-yoga": "^1.18.1",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
+    "@babel/preset-env": "^7.5.5",
     "eslint": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-mocha": "^6.0.0",
