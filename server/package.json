@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node index.js --inspect"
   },
-  "dependencies": {},
+  "dependencies": {
+    "graphql-yoga": "^1.18.1",
+    "uuid": "^3.3.2"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -16,10 +19,8 @@
     "eslint": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-mocha": "^6.0.0",
-    "graphql-yoga": "^1.18.1",
     "nodemon": "^1.19.1",
-    "prettier": "^1.18.2",
-    "uuid": "^3.3.2"
+    "prettier": "^1.18.2"
   },
   "author": "",
   "license": "ISC"

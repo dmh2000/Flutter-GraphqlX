@@ -3,7 +3,7 @@ import uuidv1 from 'uuid/v1';
 // ============================================
 // USERS
 // ============================================
-function _createUser(db, data) {
+function _createUser(db, pubsub, data) {
   // quit if email already in user
   const emailTaken = db.users.some(u => u.email === data.email);
   if (emailTaken) throw new Error('Duplicate Email');
@@ -16,6 +16,13 @@ function _createUser(db, data) {
 
   // add to users database
   db.users.push(user);
+
+  // publish the user
+  pubsub.publish('user', {
+    user: {
+      data: user
+    }
+  });
 
   // send to client
   return user;
@@ -33,8 +40,8 @@ function _deleteUser(db, id) {
 
 const Mutation = {
   // USERS
-  createUser(parent, args, { db }, info) {
-    return _createUser(db, args.data);
+  createUser(parent, args, { db, pubsub }, info) {
+    return _createUser(db, pubsub, args.data);
   },
   deleteUser(parent, args, { db }, info) {
     return _deleteUser(db, args.id);

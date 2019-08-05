@@ -17,6 +17,14 @@ const server = new GraphQLServer({
 });
 
 console.log('starting...');
-server.start(() => {
-  console.log('server running');
-});
+server.start(
+  {
+    subscriptions: {
+      path: '/',
+      keepAlive: true
+    }
+  },
+  () => {
+    console.log('server running');
+  }
+);

@@ -1,0 +1,35 @@
+# these are the graphql operations that are supported by 'server'
+
+# query for all users
+query {
+  users {
+    id
+    name
+    email
+  }
+}
+
+# query a user by id
+query {
+  user(id: "1")
+}
+
+# create a user
+mutation {
+  createUser(data: { name: "jim", email: "jim@jim.com" }) {
+    id
+    name
+    email
+  }
+}
+
+# subscribe to added users
+subscription {
+  user {
+    data {
+      id
+      name
+      email
+    }
+  }
+}

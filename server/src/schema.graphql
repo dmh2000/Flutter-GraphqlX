@@ -9,8 +9,7 @@ type Mutation {
 }
 
 type Subscription {
-  # SUBSCRIBE step 3 : add subscription to schema
-  user: UserSubscriptionPayload!
+  user: UserSubscriptionPayload
 }
 
 input CreateUserInput {
