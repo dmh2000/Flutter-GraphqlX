@@ -1,3 +1,4 @@
+// just an array of users
 let users = [];
 
 const db = {

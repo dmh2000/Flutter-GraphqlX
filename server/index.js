@@ -17,6 +17,8 @@ const server = new GraphQLServer({
 });
 
 console.log('starting...');
+// specify keepAlive true if subscriptions are supported
+// otherwise the client has to continually reconnect
 server.start(
   {
     subscriptions: {
