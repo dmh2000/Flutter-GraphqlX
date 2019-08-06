@@ -23,31 +23,38 @@ To run the server, you need node.js (v8 or later) installed. then cd into 'serve
 Graphql of course requires a schema. The schema contains a single 'Users' datastore with queries for finding and listing users, a mutation for adding a user, and a subscription to add users events. The datastore is a local array of Users.
 The schema definition is in server/src/schema.graphql. 
 ```graphql
+
+ # query for one or all users
   type Query {
-    user(id: ID): User
-    users: [User!]!
+    user(id: ID): User  
+    users: [User!]! 
   }
 
+  # create and delete a user
   type Mutation {
     createUser(data: CreateUserInput): User!
     deleteUser(id: ID!): User!
   }
 
+  # subscribe to createUser events
   type Subscription {
-    user: UserSubscriptionPayload
+    user: UserSubscriptionPayload 
   }
 
+  # data required to create a user
   input CreateUserInput {
     name: String!
     email: String!
   }
 
+  # definition of a User
   type User {
     id: ID!
     name: String!
     email: String!
   }
 
+  # definition of the subscription return data
   type UserSubscriptionPayload {
     data: User!
   }

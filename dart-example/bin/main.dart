@@ -83,10 +83,4 @@ void main() async {
 
   // issue an invalid query to get exception
   await queryWithError(client);
-
-  // // keep event loop going
-  // int count = 0;
-  // Timer.periodic(Duration(seconds: 10), (t) {
-  //   print('${count++}');
-  // });
 }
