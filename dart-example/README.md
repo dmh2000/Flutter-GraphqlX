@@ -63,25 +63,25 @@ The main function is in bin/main.dart. It does the following:
 
 The rest of the code is in lib. It is structured in separate files each containing one of the concerns.
 
-### [user.dart](../lib/user.dart)
+### lib/user.dart
 
 Contains a definition of the **User** type and its constructors.
 
-### [query.dart](../lib/query.dart)
+### lib/query.dart
 
 This file contains two functions:
 
   - query :  a function to dispatch a generic query request
   - getUsers : dispatches the specific query for a list of users.
 
-### [mutate.dart](../lib/mutate.dart)
+### lib/mutate.dart
 
 This file contains two functions
   
   - mutate : a function to dispatch a generic mutation request
   - createUser : dispatches the specific 'createUser' operation.
 
-### [subscribe.dart](../lib/subscribe.dart)
+### list/subscribe.dart
 
 This file contains two functions
 
