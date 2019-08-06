@@ -2,7 +2,7 @@
 
 This article is about using [graphql](https://pub.dev/packages/graphql) for standalone dart applications, or alternatively, 
 using it for a Flutter application where you want to go lower level and not use the 
-[graphql_flutter](https://pub.dev/packages/graphql_flutter) package.  The example program here is a Dart CLI program. 
+[graphql_flutter](https://pub.dev/packages/graphql_flutter) package.  The example program here is a Dart CLI program. Check out the code (described below) to see a reasonably straightforward implementation of query, mutation and subscription requests.
 
 ## A Graphql server
 
@@ -64,19 +64,28 @@ The rest of the code is in lib. It is structured in separate files each containi
 
 ### [user.dart](../lib/user.dart)
 
-Contains a definition of the user type and its constructors.
+Contains a definition of the **User** type and its constructors.
 
 ### [query.dart](../lib/query.dart)
 
-Contains a function to dispatch a generic query, and one that dispatches the specific query for a list of users.
+This file contains two functions:
+
+  - query :  a function to dispatch a generic query request
+  - getUsers : dispatches the specific query for a list of users.
 
 ### [mutate.dart](../lib/mutate.dart)
 
-Contains a function to dispatch a generic mutation, and one that dispatches the specific 'createUser' operation.
+This file contains two functions
+  
+  - mutate : a function to dispatch a generic mutation request
+  - createUser : dispatches the specific 'createUser' operation.
 
 ### [subscribe.dart](../lib/subscribe.dart)
 
-Contains a function to dispatch a generic subscription request and one that dispatches the subscription to listen for crated users.
+This file contains two functions
+
+  - subscription : a function to dispatch a generic subscription request
+  - subscribeUsers : dispatches the subscription to listen for crated users.
 
 ## Running the code
 
@@ -84,4 +93,12 @@ Contains a function to dispatch a generic subscription request and one that disp
   - cd info dart-example
   - get dependencies with 'pub get'
   - run the program '>dart bin/main.dart
+
+That should get some output showing what happened.
+
+## Restarting the server
+
+if you run the program twice in a row, you will get 'duplicate email' warnings since the server
+already has the users created. That's a good test, but if you want to rerun from scratch just restart
+the server.
 
