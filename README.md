@@ -1,4 +1,4 @@
-# GraphqlX - Simple Example of using GraphQL with Flutter
+# GraphqlX - Simple Examples of using GraphQL with Dart and Flutter
 
 This is the second article in a planned series of SIMPLE examples of certain Flutter packages. I mean simple, because I am not that smart and I like to see simple examples. Sometimes software examples are more complex than they need to be. 
 
@@ -54,7 +54,7 @@ The schema definition is in server/src/schema.graphql.
 
 ```
 
-## dart-example
+## PART 1 : dart-example
 
 This is about building a Dart CLI app using the package [graphql](https://pub.dev/packages/graphql). 
 
@@ -63,7 +63,7 @@ subscription requests.
 
 See [README dart-example](dart-example/README.md) for its documentation.
 
-## flutter-example
+## Coming Soon : flutter-example
 This is about building a Flutter app using the package [graphql_flutter](https://pub.dev/packages/graphql_flutter). 
 
 The graphql_flutter package provides Widgets that support integration of Graphql queries, mutations and subscriptions into a Flutter app. I found it pretty easy to use. 
