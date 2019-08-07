@@ -63,7 +63,7 @@ The schema definition is in server/src/schema.graphql.
 
 ```
 
-## PART 1 : dart-example
+## Part 1 : dart-example
 
 This is about building a standalone Dart app using the package [graphql](https://pub.dev/packages/graphql). 
 
