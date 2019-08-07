@@ -1,28 +1,20 @@
 import 'package:flutter/material.dart';
 
-class UserAddScreen extends StatelessWidget {
+class UserScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add User'),
+        title: Text('Subscription'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'user data',
-            ),
+            // display the users
+            Text('Subscription')
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          print('add user');
-        },
-        icon: Icon(Icons.add),
-        label: Text("Add User"),
       ),
       bottomNavigationBar: BottomAppBar(
         child: BottomNavigationBar(
@@ -40,16 +32,16 @@ class UserAddScreen extends StatelessWidget {
               title: Text('Subscription'),
             ),
           ],
-          currentIndex: 1,
+          currentIndex: 2,
           onTap: (int index) {
             switch (index) {
               case 0:
                 Navigator.pushNamed(context, '/');
                 break;
               case 1:
+                Navigator.pushNamed(context, '/add_user');
                 break;
               case 2:
-                Navigator.pushNamed(context, '/subscription');
                 break;
             }
           },
