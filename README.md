@@ -65,7 +65,7 @@ The schema definition is in server/src/schema.graphql.
 
 ## PART 1 : dart-example
 
-This is about building a Dart CLI app using the package [graphql](https://pub.dev/packages/graphql). 
+This is about building a standalone Dart app using the package [graphql](https://pub.dev/packages/graphql). 
 
 The graphql (dart) package provides functions and objects that support GraphQL clients making query, mutation and 
 subscription requests. 
