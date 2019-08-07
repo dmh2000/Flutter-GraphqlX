@@ -16,7 +16,7 @@ Note : there are several forks of this package floating around so if you search 
 
 ## A Graphql server
 
-These packages are client side packages so you need a graphql server to test against. The 'server' directory has a very simple (again) graphql server written for node.js using the [graphql_yoga](https://github.com/prisma/graphql-yoga) framework. 
+These packages are client side packages so you need a graphql server to test against. The 'server' directory has a very simple graphql server written for node.js using the [graphql_yoga](https://github.com/prisma/graphql-yoga) framework. 
 
 To run the server, you need node.js (v8 or later) installed. then cd into 'server', run 'npm install', then 'npm start'. If you point your browser at http://localhost:4000 you will get an instance of Graphql Playground to test against. That url is also the endpoint for client access. 
 
@@ -72,7 +72,7 @@ subscription requests.
 
 See [README dart-example](dart-example/README.md) for its documentation.
 
-## Coming Soon : flutter-example
+## Part 2 : flutter-example
 This is about building a Flutter app using the package [graphql_flutter](https://pub.dev/packages/graphql_flutter). 
 
 The graphql_flutter package provides Widgets that support integration of Graphql queries, mutations and subscriptions into a Flutter app. I found it pretty easy to use. 

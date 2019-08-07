@@ -15,6 +15,12 @@ void main() {
 // instead. It supports queries and mutations as well.
 // 10.0.2.2 is the Android Emulator IP that points to the
 // workstation localhost
+//
+// The graphql_flutter API docs say that you need a global
+// SocketClient object for subscriptions to work however
+// in the Dart example that wasn't necessary if the 'Link'
+// object is a WebSocketLink. So that is what is used here
+// and it seems to work.  This may change in the future.
 // =========================================================
   WebSocketLink link = WebSocketLink(
     url: 'ws://10.0.2.2:4000',
@@ -24,7 +30,10 @@ void main() {
   );
 
 // =========================================================
-// create a client
+// create a client with a link and a cache object
+// the Graphql library caches anything it can to improve
+// performance. I'm guessing that it will cache queries
+// if no mutation has been executed since the previous query
 // =========================================================
   ValueNotifier<GraphQLClient> client = ValueNotifier(
     GraphQLClient(

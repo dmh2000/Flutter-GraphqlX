@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import '../types/user.dart';
+import './user_card.dart';
 
 // ======================================================
 // here is where the list of users is rendered
@@ -26,25 +27,14 @@ Widget userList(context, dynamic users) {
     itemBuilder: (context, index) {
       // ===========================================================
       // do whatever to extract the data from dynamic object
+      // see user.dart
       // ===========================================================
-      User u = User.fromDynamic(users[index]);
+      User user = User.fromDynamic(users[index]);
       // ===========================================================
       // render a Card for each user
+      // see user_card.dart
       // ===========================================================
-      return Card(
-        child: Center(
-          child: Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                Text('${u.name}'),
-                Text('${u.email}'),
-                Text('${u.id}'),
-              ],
-            ),
-          ),
-        ),
-      );
+      return UserCard(user: user);
     },
     itemCount: users.length,
   );
@@ -82,7 +72,7 @@ class QueryUsers extends StatelessWidget {
         // LOADING
         // ========================================================
         if (result.loading) {
-          return CircularProgressIndicator();
+          return Container(child: CircularProgressIndicator());
         }
 
         // ========================================================
@@ -101,7 +91,7 @@ class QueryUsers extends StatelessWidget {
 // ========================================================
 // this shows the list of users. this is mostly layout
 // and can be mostly ignored regarding the graphql usage
-// the work is done in the userList function above
+// the work is done in the QueryUsers function above
 // ========================================================
 class UsersScreen extends StatelessWidget {
   @override
