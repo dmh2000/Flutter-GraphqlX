@@ -1,8 +1,10 @@
-# GrapQL with Dart
+# GraphQL with Dart
 
 This article is about using the [graphql](https://pub.dev/packages/graphql) package for standalone dart applications, or alternatively, 
 using it for a Flutter application where you want to go lower level and not use the 
 [graphql_flutter](https://pub.dev/packages/graphql_flutter) higher level package. The example program here is a Dart CLI program. Check out the code (described below) to see a reasonably straightforward implementation of query, mutation and subscription requests.
+
+The intent here is to provide very simple working code that contains examples of how to use a query, a mutation and a subscription in a standalone Dart application. 
 
 ## A Graphql server
 
