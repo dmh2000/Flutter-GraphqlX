@@ -14,7 +14,7 @@ These two packages used Apollo client as inspiration so anyone used to Apollo wi
 
 Note : there are several forks of this package floating around so if you search 'graphql flutter', be careful that you get **graphql_flutter** and **not flutter_graphql**. You want the one from Zino App. Current revision at time of writing is 2.0.1;
 
-## A Graphql server
+## A GraphQL server
 
 These packages are client side packages so you need a graphql server to test against. The 'server' directory has a very simple graphql server written for node.js using the [graphql_yoga](https://github.com/prisma/graphql-yoga) framework. 
 
@@ -63,9 +63,9 @@ The schema definition is in server/src/schema.graphql.
 
 ```
 
-## PART 1 : dart-example
+## Part 1 : dart-example
 
-This is about building a Dart CLI app using the package [graphql](https://pub.dev/packages/graphql). 
+This is about building a standalone Dart app using the package [graphql](https://pub.dev/packages/graphql). 
 
 The graphql (dart) package provides functions and objects that support GraphQL clients making query, mutation and 
 subscription requests. 
