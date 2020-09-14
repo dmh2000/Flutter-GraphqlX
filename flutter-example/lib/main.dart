@@ -29,6 +29,9 @@ void main() {
     ),
   );
 
+// Wait for Servicebinding initialization
+  WidgetsFlutterBinding.ensureInitialized();
+
 // =========================================================
 // create a client with a link and a cache object
 // the Graphql library caches anything it can to improve
