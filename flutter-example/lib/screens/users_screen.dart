@@ -54,18 +54,19 @@ class QueryUsers extends StatelessWidget {
       }
     }
     ''';
+
   @override
   Widget build(BuildContext context) {
     return Query(
       options: QueryOptions(
         document: queryUsers,
       ),
-      builder: (QueryResult result, {VoidCallback refetch}) {
+      builder: (QueryResult result, {dynamic fetchMore, refetch}) {
         // ========================================================
         // HANDLE ERRORS
         // ========================================================
-        if (result.errors != null) {
-          return Text(result.errors.toString());
+        if (result.exception != null) {
+          return Text(result.exception.toString());
         }
 
         // ========================================================

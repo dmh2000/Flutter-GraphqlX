@@ -136,8 +136,8 @@ class _UserAddScreenState extends State<UserAddScreen> {
         // =======================================
         // first, handle any errors
         // =======================================
-        if (result.hasErrors) {
-          return Text('${result.errors}');
+        if (result.hasException) {
+          return Text('${result.exception}');
         }
 
         // =======================================
